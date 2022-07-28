@@ -1,8 +1,8 @@
 class Usuario {
     constructor (nombre, apellido) {
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.libros = [];
+            this.nombre = nombre,
+            this.apellido = apellido,
+            this.libros = [],
             this.mascotas = []
     }
 
@@ -15,27 +15,28 @@ class Usuario {
     }
 
     countMascotas(){
-        console.log(this.mascotas.length);
+        console.log(this.mascotas.length)
     }
 
-    addBook(nombreLibro, autor){
-        this.libros.push({nombre:nombreLibro, autor:autor})
+    addBook(nombreLibro, autorLibro){
+        this.libros.push({nombre:nombreLibro, autor:autorLibro})
     }
 
     getBookNames(){
-        console.log(this.libros.map(l => l.nombre));
+        console.log(this.libros.map(libro => libro.nombre))
     }
 }
 
+
 // Prueba
-const u = new Usuario('Elio', 'Hongo')
+const usuario = new Usuario('Elon', 'Musk')
 
-u.getFullName()
+usuario.getFullName()
 
-u.addMascota('perro')
-u.addMascota('gato')
-u.countMascotas()
+usuario.addMascota('perro')
+usuario.addMascota('gato')
+usuario.countMascotas()
 
-u.addBook('El señor de las moscas', 'William Golding')
-u.addBook('Fundacion', 'Isaac Asimov')
-u.getBookNames()
+usuario.addBook('El señor de las moscas', 'William Golding')
+usuario.addBook('Fundacion', 'Isaac Asimov')
+usuario.getBookNames()
